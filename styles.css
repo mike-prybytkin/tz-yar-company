@@ -1,0 +1,71 @@
+:root {
+  --scroll-wrapper: 0; /* Значение по умолчанию */
+}
+
+.body {
+  margin: 0;
+}
+
+/* ::-webkit-scrollbar {
+  display: none;
+} */
+
+.main {
+  position: relative;
+  background-color: #000000;
+  height: 100%;
+  width: 100%;
+}
+
+.scroll-event {
+  background-image: url('./assets/dust.png');
+  width: 100%;
+  height: 300vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.scroll-event__wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  transition: transform 0.5s ease;
+}
+
+.scroll-event__stop {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.scroll-event__elements-wrapper {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: 5vw;
+  height: auto;
+}
+
+.scroll-event__element {
+  position: relative;
+  width: 15vw;
+  height: 15vw;
+  background: #ffffff67;
+  transition: transform 0.5s ease;
+}
+
+.scroll-event__element_1 {
+  transform: translateY(calc( (1 - var(--scroll-wrapper)) * 30vh ));
+}
+.scroll-event__element_2 {
+  transform: translateY(calc( (1 - var(--scroll-wrapper)) * 40vh ));
+}
+.scroll-event__element_3 {
+  transform: translateY(calc( (1 - var(--scroll-wrapper)) * 50vh ));
+}
